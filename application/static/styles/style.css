@@ -1,0 +1,79 @@
+body {
+    background-color: rgb(27,27,27);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+article {
+    background: linear-gradient(
+      to right, 
+      hsl(98 100% 62%), 
+      hsl(204 100% 59%)
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 5vmin;
+    line-height: 1.1;
+  }
+  
+  body {
+    background: hsl(204 100% 5%);
+    
+    min-block-size: 100%;
+    min-inline-size: 100%;
+    box-sizing: border-box;
+    display: grid;
+    place-content: center;
+    font-family: system-ui;
+    font-size: min(100%, 3vmin);
+  }
+  
+  h1, p, body {
+    margin: 0;
+  }
+  
+  p {
+    font-family: "Dank Mono", ui-monospace, monospace;
+  }
+  
+.title {
+  background: linear-gradient(
+    to right, 
+    hsl(98 100% 62%), 
+    hsl(204 100% 59%)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 3vmin;
+  line-height: 1.1;
+}
+@media (min-width: 992px) {
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
+    }
+}
+
+.custombg {
+    background-image: url(../images/te.jpeg);
+    background-size: cover;
+}
+
+.card {
+    border: none;
+}
+
+.card-body {
+    background: rgb(49, 49, 49);
+}
+
+.card-img, .card-img-top {
+    object-fit: cover;
+    aspect-ratio: 1/.7;
+}

@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
+            crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'styles/style.css')}}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+        <title>{% block title %}Home{% endblock %}</title>
+    </head>
+    <body>
+        
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark mt-5">
+                <div class="container-fluid">
+                  <article class="navbar-brand fw-bold" href="#">
+                    <h1>Market Basket Analysis</h1>
+                  </article>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                </div>
+            </nav>
+        </div>
+
+
+        <div class="container-fluid custombg mt-5">
+            <div class="container pt-5 pb-5 m-2">
+                <h1 class="fw-bold p-4">Get Insights about you business</h1>
+                <p class="fs-3 mb-5 lh-sm text-white-20"><mark class="title">Market Basket Analysis</mark>  is a widely-used technique to uncover associations between items and purchasing patterns in customers. 
+                It is used to produce product recommendations and marketing ideas
+                by translating vast amount of customer transaction data into association rules. </p>
+                <p class="fs-3 mb-5 lh-sm text-white-20">This platform gives you the opportunity to get personalised MB-analysis on your transactional data as well as important insights and statistics.
+                It will make all of your transactions data into a readable and useful format, that can help you improve your marketing strategy. </p>
+                <p class="fs-3 mb-1 lh-sm text-white-20">Some use cases include:
+                <ol class="fs-5 mb-5 lh-1 text-white-20 fw-light">
+                    <li>Building Netflix-style recommendation engine</li>
+                    <li>Improve product recommendation on an e-commerce store</li>
+                    <li>Cross-sell products in retail setting</li>
+                    <li>Improve inventory management</li>
+                    <li>Increase sales</li>
+                    <li>Optimise store layouts</li>
+                    <li>Design product bundles</li>
+                </ol>
+                </p>
+                <p class="fs-3 mb-3 lh-sm text-white-20">You must follow the instruction for the format of the data: </p>
+                <p class="fs-3 mb-1 lh-sm text-white-20">3 columns:
+                    <ol class="fs-5 mb-5 lh-1 text-white-20 fw-light">
+                        <li>Transaction ID</li>
+                        <li>Items</li>
+                        <li>Date</li>
+                    </ol>
+                    <div class="text-center">
+                        <img src="{{url_for('static',filename = 'images/bakery2.png')}}" class="rounded">
+                    </div>
+                    <p class="fs-3 mb-3 lh-sm text-white-20">The first column of the dataset contains the transaction ID that the item in second column is part of. 
+                        Hence, the dataset has to be ordered by each item purchased, not by each transaction. The third column shows the specific time of the corresponding transaction. 
+                        It was added as a feature for the dataset to contain, because it provides useful information, 
+                        that can result in more broad range of statistics.  
+                    </p>
+                </p>
+                <p class="fs-3 mb-3 lh-sm text-white-20">Here are some examples of already performed analysis on transaction datasets: </p>
+            </div>
+        </div>
+
+        <div class="container pt-3">
+            <div class="row mt-5">
+                <div class="col-sm">
+                    <div class="card">
+                        <img src="{{url_for('static',filename = 'images/bakery2.png')}}" class="card-img-top">
+                        <div class="card-body p-4 rounded-bottom">
+                            <h5 class="card-title fw-bold">Bakery.csv</h5>
+                            <p class="card-text text-white-50">Example of Market Basket Analysis report</p>
+                            <a href="/dashapp/" class="btn btn-primary">Report</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <h2 class="mb-5">Upload your data:</h2>
+                </div>
+                <div class="col-sm">
+                    <div class="mb-3">
+                        <a href="/dashapp2/" class="btn btn-primary" value="Submit" style="margin-top: 2em; width: 100%;" >Click Here</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        {% block content %}
+        {% endblock %}
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </body>
+</html>
